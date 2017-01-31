@@ -24,7 +24,7 @@ public class StockMarketTest {
 	public void getMarketValueTest() {
 		Stock stock = new Stock("first",3);
 		business.addStock(stock);
-		EasyMock.expect(mockMarket.getPrice("first")).andReturn(30.00);
+		EasyMock.expect(mockMarket.getPrice("first")).andReturn(30.0);
 		EasyMock.replay(mockMarket);
 		System.out.println(" The market value is : "+business.getMarketValue());
 		assertEquals( Double.valueOf(90.0),business.getMarketValue());
